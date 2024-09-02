@@ -1,0 +1,119 @@
+$primary-color: #f5ba13
+$secondary-color: #fff
+
+*
+    margin: 0
+    padding: 0
+
+html
+    font-family: "Montserrat", sans-serif
+
+body
+    background: #eee
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png")
+    padding: 0 16px
+
+header
+    background-color: $primary-color
+    margin: auto -16px
+    padding: 16px 32px
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3)
+    h1
+        color: $secondary-color
+        font-family: "McLaren", cursive
+        font-weight: 200
+
+.create-note
+    position: relative
+    width: 480px
+    margin: 30px auto 20px auto
+    background: $secondary-color
+    padding: 15px
+    border-radius: 7px
+    box-shadow: 0 1px 5px rgb(138, 137, 137)
+    %input-area
+        width: 100%
+        border: none
+        padding: 4px
+        outline: none
+        font-size: 1.2em
+        font-family: inherit
+        resize: none
+    input
+        @extend %input-area
+    textarea
+        @extend %input-area
+    button
+        position: absolute
+        right: 18px
+        bottom: -18px
+        background: $primary-color
+        color: $secondary-color
+        border: none
+        border-radius: 50%
+        width: 36px
+        height: 36px
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3)
+        cursor: pointer
+        outline: none
+        &:hover
+            color: $primary-color
+
+.note
+    position: relative
+    background: $secondary-color
+    border-radius: 7px
+    box-shadow: 0 2px 5px #ccc
+    padding: 10px
+    width: 240px
+    margin: 16px
+    float: left
+    h1
+        font-size: 1.1em
+        margin-bottom: 6px
+    p
+        font-size: 1.1em
+        margin-bottom: 10px
+        white-space: pre-wrap
+        word-wrap: break-word
+    button
+        position: absolute
+        margin-right: 10px
+        color: $primary-color
+        right: 10px
+        bottom: -15px
+        border: none
+        width: 36px
+        height: 36px
+        cursor: pointer
+        outline: none
+    .edit-btn
+        position: relative
+        float: right
+        right: -10px
+        bottom: 3px
+        background-color: $secondary-color
+        cursor: pointer
+        outline: none
+        z-index: 1
+
+%edit-input-area
+    position: relative
+    border: grey solid thin
+    border-radius: 5px
+    width: 70%
+    padding: 4px
+    outline: none
+    font-size: 1.1em
+    font-family: inherit
+    resize: none
+.edit
+    position: relative
+    input
+        @extend %edit-input-area
+    textarea
+        @extend %edit-input-area
+    button
+        position: absolute
+        right: -1px
+        bottom: 10px
